@@ -1,0 +1,279 @@
+/* Menghilangkan scrollbar dari semua elemen */
+* {
+    scrollbar-width: none; /* Untuk Firefox */
+    -ms-overflow-style: none;  /* Untuk Internet Explorer dan Edge */
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Untuk Chrome, Safari, dan Opera */
+}
+
+/* CSS Umum */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.notification-bell i {
+    color: #9d9c9a;
+    width: 30px;
+    margin-right: 0px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.profile-info p {
+    margin: 0;
+    color: grey;
+    font-size: 12px;
+}
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    padding: 10px;
+    overflow-y: auto;
+    height: calc(100vh - 140px);
+}
+
+.balance, .actions, .promo, .transaction-history {
+    margin: 15px 0;
+}
+
+.balance .saldo, .balance .interest {
+    background: linear-gradient(to bottom right, #0387ce, #5ecfef);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+}
+
+.saldo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 0px rgb(155, 155, 155);
+}
+
+.saldo-container {
+    margin-top: -15px;
+    display: flex;
+    align-items: center;
+}
+
+#toggle-saldo {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    margin-left: 10px;
+}
+
+svg {
+    width: 120px;
+    height: 65px;
+    margin-right: -20px;
+    margin-top: -15px;
+}
+
+.styled-hr {
+    border: 0;
+    height: 1px;
+    background: #dddcdc7a;
+    margin: 3px 0;
+    width: calc(100%);
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.action-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 0px rgb(155, 155, 155);
+    text-align: center;
+    flex: 1;
+    min-width: calc(25% - 20px);
+}
+
+.action-item i {
+    color: #018dd8;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.promo {
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.image-container {
+    display: flex;
+}
+
+.image-container img {
+    max-width: 100%;
+}
+
+.transaction-history {
+    background-color: #f9f9f9;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.202);
+}
+
+.transaction {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin: 2px 0;
+}
+
+.transaction + .transaction {
+    margin-top: 5px;
+}
+
+.profile-thumbnail {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.transaction-info {
+    flex: 1;
+}
+
+.transaction-info h3 {
+    margin-top: 2px;
+}
+
+.transaction-info h4,
+.transaction-info p {
+    margin: 0;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -5px 9px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.bottom-nav button {
+    margin-right: 10px;
+    background: none;
+    border: none;
+    padding: 5px;
+    color: #9d9c9a;
+    font-size: 10px;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: none;
+    margin-bottom: -20px;
+}
+
+.bottom-nav button i {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+
+.bottom-nav .top-up-btn i {
+    font-size: 45px;
+    margin-bottom: 0;
+}
+
+.bottom-nav .top-up-btn-container {
+    bottom: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    max-width: 20%;
+}
+
+.bottom-nav .top-up-btn {
+    background: #fff;
+    color: #018dd8;
+    border-radius: 50px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    bottom: 5px;
+}
+
+.bottom-nav button:focus {
+    outline: none;
+    color: #018dd8;
+    font-weight: bold;
+}
