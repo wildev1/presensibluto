@@ -49,7 +49,7 @@
 												<?php endif; ?>
 											</td>
 											<td>
-												<a href="<?php echo base_url('santri/view/' . $result->santri_id); ?>" class="btn btn-warning waves-effect waves-light btn-sm"><i class="mdi mdi-pencil"></i></a>
+												<button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target=".editsantri<?php echo $result->santri_id; ?>"><i class="mdi mdi-pencil"></i></button>
 												<a href="<?php echo base_url('santri/edit/' . $result->santri_id); ?>" class="btn btn-info waves-effect waves-light btn-sm"><i class="fa fa-eye"></i></a>
 												<a href="<?php echo base_url('santri/delete/' . $result->santri_id); ?>" class="btn btn-danger waves-effect waves-light btn-sm" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="mdi mdi-trash-can"></i></a>
 											</td>
@@ -64,3 +64,4 @@
     </div>
 
 <?php $this->load->view('pages/santri/add');?>
+<?php $this->load->view('pages/santri/edit');?>
