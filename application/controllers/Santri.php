@@ -22,12 +22,6 @@ class Santri extends CI_Controller {
         $this->load->view('templates/content', $this->data);
     }
 
-    public function create() {
-        $data['rayon'] = $this->RayonModel->get_all_rayon();
-        $data['tahun_ajaran'] = $this->TahunAjaranModel->get_all_tahun_ajaran();
-        $this->load->view('santri/create', $data);
-    }
-
     public function simpan() {
         $this->form_validation->set_rules('nama_santri', 'Nama Santri', 'required');
 		$this->form_validation->set_rules('nik_santri', 'NIK Santri', 'required|is_unique[santri.nik_santri]');
