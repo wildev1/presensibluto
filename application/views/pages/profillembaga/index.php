@@ -47,22 +47,15 @@
 
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title mb-4">Data Lembaga</h4>
+                            <h4 class="card-title mb-4">Data Instansi</h4>
                             <div class="table-responsive">
                                 <table class="table table-nowrap mb-0">
                                     <tbody>
                                         <tr>
-                                            <th scope="row">Nama Lembaga</th>
+                                            <th scope="row">Nama Instansi</th>
                                             <td><?php echo $result->nama_lembaga; ?></td>
                                         </tr>
-                                        <tr>
-                                            <th scope="row">NSM </th>
-                                            <td><?php echo $result->nsm; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">NPSM </th>
-                                            <td><?php echo $result->npsm; ?></td>
-                                        </tr>
+										
                                         <tr>
                                             <th scope="row">Alamat </th>
                                             <td><?php echo $result->alamat; ?></td>
@@ -98,10 +91,6 @@
                                         <tr>
                                             <th scope="row">NIP </th>
                                             <td><?php echo $result->nip; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">QRcode </th>
-                                            <td> <img src="<?php echo base_url('upload/qrcode/'.$result->qrcode); ?>" style="width: 70px; height: 70px;">											</td>
                                         </tr>
                                     </tbody>
                                 </table>

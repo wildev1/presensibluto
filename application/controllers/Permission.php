@@ -5,6 +5,11 @@ class Permission extends CI_Controller {
 	public function __construct() {
         parent::__construct();
         $this->load->model('PermissionModel');
+		$this->load->model('UsersModel');
+		 if (!$this->session->userdata('logged_in')) {
+            redirect('auth');
+        }
+		check_access('Admin');
     }
 
 	public function index() {

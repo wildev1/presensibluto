@@ -8,6 +8,12 @@ class RolesPermission extends CI_Controller {
         $this->load->model('RolesPermissionModel');
         $this->load->model('RolesModel');
         $this->load->model('PermissionModel');
+        $this->load->model('StatusPegawaiModel');
+        $this->load->model('UsersModel');
+		 if (!$this->session->userdata('logged_in')) {
+            redirect('auth');
+        }
+		check_access('Admin');
     }
 
     public function index() {

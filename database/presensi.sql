@@ -1,80 +1,154 @@
-CREATE DATABASE presensi;
-
-CREATE TABLE karyawan (
-  karyawan_id VARCHAR(50) PRIMARY KEY,
-  nama_karyawan VARCHAR(255) NOT NULL,
-  jabatan VARCHAR(255) NOT NULL,
-  tanggal_gabung DATE NOT NULL,
-  golongan_id VARCHAR(50),
-  FOREIGN KEY (golongan_id) REFERENCES golongan(golongan_id)
-);
-
-CREATE TABLE golongan (
-  golongan_id VARCHAR(50) PRIMARY KEY,
-  nama_golongan VARCHAR(255) NOT NULL
-);
-
-CREATE TABLE shift (
-  shift_id VARCHAR(50) PRIMARY KEY,
-  nama_shift VARCHAR(255) NOT NULL,
-  jam_mulai TIME NOT NULL,
-  jam_selesai TIME NOT NULL,
-  golongan_id VARCHAR(50),
-  FOREIGN KEY (golongan_id) REFERENCES golongan(golongan_id)
-);
-
-CREATE TABLE jadwal (
-  jadwal_id VARCHAR(50) PRIMARY KEY,
-  karyawan_id VARCHAR(50),
-  shift_id VARCHAR(50),
-  tanggal DATE NOT NULL,
-  hari VARCHAR(50) NOT NULL,
-  FOREIGN KEY (karyawan_id) REFERENCES karyawan(karyawan_id),
-  FOREIGN KEY (shift_id) REFERENCES shift(shift_id)
-);
-
-CREATE TABLE log_presensi (
-  log_id VARCHAR(50) PRIMARY KEY,
-  karyawan_id VARCHAR(50),
-  jenis_log VARCHAR(50) NOT NULL,
-  waktu_log DATETIME NOT NULL,
-  lokasi_log VARCHAR(255) NOT NULL,
-  keterangan TEXT,
-  FOREIGN KEY (karyawan_id) REFERENCES karyawan(karyawan_id)
-);
-
 CREATE TABLE users (
-  user_id VARCHAR(50) PRIMARY KEY,
-  username VARCHAR(255) NOT NULL,
-  password VARCHAR(255) NOT NULL,
-  email VARCHAR(255) NOT NULL,
-  karyawan_id VARCHAR(50),
-  FOREIGN KEY (karyawan_id) REFERENCES karyawan(karyawan_id)
+    users_id VARCHAR(50) PRIMARY KEY,
+    nama VARCHAR(100),
+    username VARCHAR(50) UNIQUE,
+    password VARCHAR(255),
+    email VARCHAR(100),
+    jenis_kelamin VARCHAR(20),
+    no_pegawai VARCHAR(20),
+    telepon VARCHAR(20),
+    status_pegawai_id VARCHAR(50),
+    photo VARCHAR(225),
+    qrcode VARCHAR(225),
+    alamat TEXT,
+    status ENUM('aktif', 'non-aktif') DEFAULT 'non-aktif',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (status_pegawai_id) REFERENCES status_pegawai (status_pegawai_id) ON DELETE CASCADE
 );
 
 CREATE TABLE roles (
-  role_id VARCHAR(50) PRIMARY KEY,
-  nama_role VARCHAR(255) NOT NULL
+    roles_id VARCHAR(50) PRIMARY KEY,
+    nama_roles VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-CREATE TABLE permissions (
-  permission_id VARCHAR(50) PRIMARY KEY,
-  nama_permission VARCHAR(255) NOT NULL
+CREATE TABLE permission (
+    permission_id VARCHAR(50) PRIMARY KEY,
+    nama_permission VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
-CREATE TABLE user_roles (
-  user_role_id VARCHAR(50) PRIMARY KEY,
-  user_id VARCHAR(50),
-  role_id VARCHAR(50),
-  FOREIGN KEY (user_id) REFERENCES users(user_id),
-  FOREIGN KEY (role_id) REFERENCES roles(role_id)
+CREATE TABLE roles_permission (
+    roles_permission_id VARCHAR(50) PRIMARY KEY,
+    roles_id VARCHAR(50),
+    permission_id VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (roles_id) REFERENCES roles (roles_id) ON DELETE CASCADE,
+    FOREIGN KEY (permission_id) REFERENCES permission (permission_id) ON DELETE CASCADE
 );
 
-CREATE TABLE role_permissions (
-  role_permission_id VARCHAR(50) PRIMARY KEY,
-  role_id VARCHAR(50),
-  permission_id VARCHAR(50),
-  FOREIGN KEY (role_id) REFERENCES roles(role_id),
-  FOREIGN KEY (permission_id) REFERENCES permissions(permission_id)
+CREATE TABLE users_roles (
+    users_roles_id VARCHAR(50) PRIMARY KEY,
+    users_id VARCHAR(50),
+    roles_id VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (users_id) REFERENCES users (users_id) ON DELETE CASCADE,
+    FOREIGN KEY (roles_id) REFERENCES roles (roles_id) ON DELETE CASCADE
 );
 
+CREATE TABLE lembaga (
+    lembaga_id VARCHAR(32) PRIMARY KEY,
+    nama_lembaga VARCHAR(255),
+    nsm VARCHAR(20),
+    npsm VARCHAR(20),
+    alamat TEXT,
+    kecamatan VARCHAR(50),
+    kabupaten VARCHAR(50),
+    provinsi VARCHAR(50),
+    logo VARCHAR(255),
+    nama_pimpinan VARCHAR(255),
+    nip VARCHAR(20),
+    qrcode VARCHAR(220),
+    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE status_pegawai (
+    status_pegawai_id VARCHAR(50) PRIMARY KEY,
+    kode_status_pegawai VARCHAR(100),
+    nama_status_pegawai VARCHAR(100),
+    deskripsi TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE shifts (
+    shift_id VARCHAR(50) PRIMARY KEY,
+    nama_shift VARCHAR(100),
+    jam_mulai TIME,
+    jam_selesai TIME,
+    durasi VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE group_shifts (
+    group_shift_id VARCHAR(50) PRIMARY KEY,
+    groub_shift VARCHAR(50),
+    shift_id VARCHAR(50),
+    hari VARCHAR(50),
+    FOREIGN KEY (shift_id) REFERENCES shifts (shift_id) ON DELETE CASCADE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE users_shift_groups (
+    users_shift_group_id VARCHAR(50) PRIMARY KEY,
+    users_id VARCHAR(50),
+    group_shift_id VARCHAR(50),
+    hari VARCHAR(50),
+    FOREIGN KEY (users_id) REFERENCES users (users_id) ON DELETE CASCADE,
+    FOREIGN KEY (group_shift_id) REFERENCES group_shifts (group_shift_id) ON DELETE CASCADE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE presensi (
+    presensi_id VARCHAR(50) PRIMARY KEY,
+    users_id VARCHAR(50),
+    shift_id VARCHAR(50),
+    tanggal DATE NOT NULL,
+    waktu_masuk TIME,
+    waktu_keluar TIME,
+    waktu_masuk_seharusnya TIME, -- Waktu masuk yang diharapkan sesuai shift
+    terlambat BOOLEAN DEFAULT FALSE, -- Menandakan apakah karyawan terlambat
+    lama_terlambat TIME, -- Durasi keterlambatan
+    jenis_presensi ENUM('Apel', 'Kerja') NOT NULL,
+    status ENUM(
+        'Hadir',
+        'Izin',
+        'Sakit',
+        'Bepergian',
+        'Cuti',
+        'Tanpa Keterangan'
+    ) NOT NULL DEFAULT 'Tanpa Keterangan',
+    izin_kategori_id VARCHAR(50),
+    alasan VARCHAR(255),
+    photo_path VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (users_id) REFERENCES users (users_id) ON DELETE CASCADE,
+    FOREIGN KEY (shift_id) REFERENCES shifts (shift_id) ON DELETE CASCADE,
+    FOREIGN KEY (izin_kategori_id) REFERENCES izin_kategori (izin_kategori_id) ON DELETE SET NULL
+);
+
+CREATE TABLE laporan_kinerja (
+    laporan_id VARCHAR(50) PRIMARY KEY,
+    users_id VARCHAR(50),
+    tanggal DATE,
+    photo VARCHAR(255),
+    status_validasi ENUM(
+        'Valid',
+        'Tidak Valid',
+        'Pending'
+    ) DEFAULT 'Pending',
+    catatan TEXT,
+    dibuat_pada TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    diperbarui_pada TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (users_id) REFERENCES users (users_id) ON DELETE CASCADE
+);

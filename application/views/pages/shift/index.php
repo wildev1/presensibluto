@@ -6,9 +6,7 @@
                     <div class="clearfix">
                         <div class="float-right">
 							<div class="btn-group" role="group" aria-label="Basic example">
-								<a target="_blank" href="<?php echo site_url('admin/dosen/cetak'); ?>"class="btn btn-danger btn-sm"><i class="bx bx-printer label-icon"></i></a>
-								<!-- <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target=".importdosen"><i class="mdi mdi-cloud-upload"></i></button> -->
-								<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target=".adddosen"><i class="bx bx-plus"></i></button>
+								<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target=".addshift"><i class="bx bx-plus"></i></button>
 							</div>
                         </div>
                         <h4 class="card-title mb-4"><?php echo $title ?></h4>
@@ -22,31 +20,30 @@
                                 <tr>
                                     <th width="10px">No</th>
                                     <th>Nama Shift</th>
-                                    <th>Jam Mulai</th>
-                                    <th>Jam Selesai</th>
-                                    <th>Golongan</th>
-                                    <th>Action</th>
+									<th>Jam Mulai</th>
+									<th>Jam Selesai</th>
+									<th>Durasi</th>
+									<th>Actions</th>
                                 </tr>
                             </thead>
                             <tbody>	
+								 <?php $no =1; foreach ($shifts as $shift): ?>
 									<tr>
-										<td>1</td>
-										<td>Shift Pagi</td>
-										<td>08:00</td>
-										<td>14:00</td>
-										<td>A</td>
-										<td align="center">
-											<div class="btn-group" role="group" aria-label="Basic example">
-											    <button type="button" class="btn btn-warning btn-sm waves-effect waves-light" data-toggle="modal" data-target=".dosen">
-													<i class="mdi mdi-pencil"></i>
-												</button>
-												<button type="button" class="btn btn-danger waves-effect waves-light btn-sm" onclick="hapusdosen('')">
-													<i class="mdi mdi-trash-can"></i>
-												</button>
-											 </div>
-											</td>
+										<td><?php echo $no++; ?></td>
+										<td><?php echo $shift->nama_shift; ?></td>
+										<td><?php echo $shift->jam_mulai; ?></td>
+										<td><?php echo $shift->jam_selesai; ?></td>
+										<td><?php echo $shift->durasi; ?></td>
+										<td width="10px">
+											<button type="button" class="btn btn-warning btn-sm waves-effect waves-light" data-toggle="modal" data-target=".editshift<?php echo $shift->shift_id; ?>">
+												<i class="mdi mdi-pencil"></i>
+											</button>
+											<button type="button" class="btn btn-danger waves-effect waves-light btn-sm" data-toggle="modal" data-target=".deleteshift<?php echo $shift->shift_id; ?>">
+												<i class="mdi mdi-trash-can"></i>
+											</button>
 										</td>
 									</tr>
+								<?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>
@@ -54,3 +51,8 @@
             </div>
         </div>
     </div>
+
+
+<?php $this->load->view('pages/shift/edit');?>
+<?php $this->load->view('pages/shift/add');?>
+<?php $this->load->view('pages/shift/delete');?>

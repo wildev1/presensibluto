@@ -17,14 +17,6 @@
                             <input type="text" class="form-control" name="nama_lembaga" value="<?php echo $result->nama_lembaga; ?>" id="nama_lembaga">
                         </div>
                         <div class="form-group">
-                            <label for="nsm">NSM</label>
-                            <input type="text" class="form-control" name="nsm" value="<?php echo $result->nsm; ?>" id="nsm">
-                        </div>
-                        <div class="form-group">
-                            <label for="npsm">NPSM</label>
-                            <input type="text" class="form-control" name="npsm" value="<?php echo $result->npsm; ?>" id="npsm">
-                        </div>
-                        <div class="form-group">
                             <label for="alamat">Alamat</label>
                             <textarea class="form-control" name="alamat" id="alamat"><?php echo $result->alamat; ?></textarea>
                         </div>

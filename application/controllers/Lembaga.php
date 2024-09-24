@@ -6,10 +6,15 @@ class Lembaga extends CI_Controller {
 	public function __construct() {
         parent::__construct();
 		$this->load->model('LembagaModel');
+		$this->load->model('UsersModel');
+		 if (!$this->session->userdata('logged_in')) {
+            redirect('auth');
+        }
+		check_access('Admin');
     }
 
 	public function index() {
-		$this->data['title'] = 'Lembaga';
+		$this->data['title'] = 'Instansi';
 		$this->data['lembaga'] = $this->LembagaModel->get_lembaga();
         $this->data['content_view'] = 'pages/profillembaga/index';
         $this->load->view('templates/content', $this->data);

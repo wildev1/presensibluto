@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title><?php echo $title ?> | E-Mall</title>
+    <title><?php echo $title ?> | E-SiP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="Apins Digital Solusi Teknologi Tekini" name="description">
     <meta content="E-Raport" name="Aqid Fahri Hafin">

@@ -93,7 +93,7 @@
                              class="badge badge-success float-right">11</span><i
                              class="bx bx-wrench font-size-16 align-middle mr-1"></i> Settings</a>
                      <div class="dropdown-divider"></div>
-                     <a class="dropdown-item text-danger" href="<?php echo base_url('home/logout');?>"><i
+                     <a class="dropdown-item text-danger" href="<?php echo site_url('auth/logout'); ?>"><i
                              class="bx bx-power-off font-size-16 align-middle mr-1 text-danger"></i> Logout</a>
                  </div>
              </div>
