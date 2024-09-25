@@ -12,7 +12,7 @@ class Laporan extends CI_Controller {
     }
 
 	public function index() {
-		$this->data['title'] = 'Laporan Presensi';
+		$this->data['title'] = 'Rekap Presensi Semua Pegawai';
 		$date_awal = $this->input->post('date_awal');
 		$date_akhir = $this->input->post('date_akhir');
 
@@ -52,7 +52,7 @@ class Laporan extends CI_Controller {
 
 
 	public function personal() {
-		$this->data['title'] = 'Laporan Presensi';
+		$this->data['title'] = 'Rekap Presensi individu';
 		$this->data['users'] = $this->UsersModel->get_all_users();
 		$this->data['status_pegawai'] = $this->StatusPegawaiModel->get_all_status_pegawai();
 		$this->data['roles'] = $this->RolesModel->get_all_roles();

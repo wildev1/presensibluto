@@ -15,7 +15,7 @@ class Kinerja extends CI_Controller {
     }
 
 	public function index() {
-		$this->data['title'] = 'Kinerja';
+		$this->data['title'] = 'Laporan Pekerjaan';
 		$this->data['user_role'] = $this->session->userdata('role'); 
 		$user_role = $this->session->userdata('role'); 
 		$user_id = $this->session->userdata('users_id'); 

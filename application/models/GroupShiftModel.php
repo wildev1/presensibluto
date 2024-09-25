@@ -4,6 +4,7 @@ class GroupShiftModel extends CI_Model {
         $this->load->database();
     }
 
+
     public function get_all_group_shifts() {
         $this->db->select('group_shifts.*, shifts.nama_shift');
         $this->db->from('group_shifts');

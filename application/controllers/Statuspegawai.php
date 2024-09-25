@@ -9,7 +9,7 @@ class Statuspegawai extends CI_Controller {
     }
 
 	public function index() {
-		$this->data['title'] = 'Kepegawaian';
+		$this->data['title'] = 'Status Pegawai';
 		$this->data['status_pegawai'] = $this->StatusPegawaiModel->get_all_status_pegawai();
         $this->data['content_view'] = 'pages/status_pegawai/index';
         $this->load->view('templates/content', $this->data);

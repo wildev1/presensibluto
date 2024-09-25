@@ -7,49 +7,44 @@
                       <li class="nav-item">
                           <a class="nav-link  arrow-none" href="<?php echo base_url('/dashboard');?>"
                               id="topnav-dashboard" role="button" aria-expanded="false">
-                              <i class="mdi mdi-home-variant mr-2"></i>Dashboard </a>
+                              <i class="mdi mdi-home-variant mr-2"></i>Dashboard</a>
                       </li>
-                      <li class="nav-item">
+                      <!-- <li class="nav-item">
                           <a class="nav-link  arrow-none" href="<?php echo base_url('/profile');?>" id="topnav-dashboard"
                               aria-expanded="false">
                               <i class="mdi mdi-account mr-2"></i>Profil </a>
-                      </li>
+                      </li> -->
 					  
 							
 					  <?php if ($this->session->userdata('role') == 'Admin'): ?>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard" role="button"
                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              <i class="mdi mdi-server-network mr-2"></i>Data Master<div class="arrow-down"></div>
+                              <i class="mdi mdi-server-network mr-2"></i>Managemen Pegawai<div class="arrow-down"></div>
                           </a>
                           <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
-                              <a href="<?php echo base_url('/lembaga');?>" class="dropdown-item">Profil Instansi </a>
+                              <a href="<?php echo base_url('/profile');?>" class="dropdown-item">Profil</a>
+                              <a href="<?php echo base_url('/karyawan');?>" class="dropdown-item">Data Pegawai</a>
+                              <a href="<?php echo base_url('/statuspegawai');?>" class="dropdown-item">Status Pegawai</a>
+                              <!-- <a href="<?php echo base_url('/lembaga');?>" class="dropdown-item">Profil Instansi </a> -->
                               <div class="dropdown">
-                                  <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-email"
+                                  <!-- <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-email"
                                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      Data Referensi <div class="arrow-down"></div>
+                                      Data Referensi <div class="arrow-down"></div> -->
                                   </a>
                                   <div class="dropdown-menu" aria-labelledby="topnav-email">
-                                      <a href="<?php echo base_url('/statuspegawai');?>" class="dropdown-item">Status Kepegawaian</a>
-                                      <a href="<?php echo base_url('/shift');?>" class="dropdown-item">Jam Kerja</a>
                                       <!-- <a href="<?php echo base_url('/shiftGroup');?>" class="dropdown-item">Data Shift Group</a> -->
-                                      <a href="<?php echo base_url('/groupShift');?>" class="dropdown-item">Jadwal Kerja</a>
-                                     <a href="<?php echo base_url('/usersShiftGroup');?>" class="dropdown-item">Jadwal Pegawai</a>
-                                      <a href="#" class="dropdown-item">Kategori Perizinan</a>
                                   </div>
                               </div>
                               <div class="dropdown">
-                                  <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-email"
+                                  <!-- <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-email"
                                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      Manajemen Data <div class="arrow-down"></div>
+                                      Manajemen Data <div class="arrow-down"></div> -->
                                   </a>
                                   <div class="dropdown-menu" aria-labelledby="topnav-email">
-                                     <a href="<?php echo base_url('/karyawan');?>" class="dropdown-item">Data Pegawai</a>
-                                     <a href="<?php echo base_url('/laporan');?>" class="dropdown-item">Laporan Presensi</a>
-                                     <a href="<?php echo base_url('/laporan/personal');?>" class="dropdown-item">Laporan Personal</a>
-                                     <a href="<?php echo base_url('/presensi/addpresensi');?>" class="dropdown-item">Add Presensi</a>
+                                     <!-- <a href="<?php echo base_url('/laporan');?>" class="dropdown-item">Laporan Presensi</a>
+                                     <a href="<?php echo base_url('/laporan/personal');?>" class="dropdown-item">Laporan Personal</a> -->
                                      <!-- <a href="<?php echo base_url('/alumni');?>" class="dropdown-item">Laporan Presensi</a> -->
-                                     <!-- <a href="<?php echo base_url('/kartusantri');?>" class="dropdown-item">Laporan Perizinan</a> -->
                                   </div>
                               </div>
                           </div>
@@ -62,12 +57,45 @@
                               <i class="mdi mdi-account-key mr-2"></i>Manajemen Presensi <div class="arrow-down"></div>
                           </a>
                           <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
-                              <a href="<?php echo base_url('/kinerja');?>" class="dropdown-item">Laporan Kinerja</a>
-                              <a href="#" class="dropdown-item">Perizinan</a>
-                              <a href="#" class="dropdown-item">Rekap Presensi</a>
+                              <a href="<?php echo base_url('/shift');?>" class="dropdown-item">Jam Kerja</a>
+                              <a href="<?php echo base_url('/groupShift');?>" class="dropdown-item">Jadwal Kerja</a>
+                              <a href="<?php echo base_url('/usersShiftGroup');?>" class="dropdown-item">Jadwal Pegawai</a>
+                              <div class="dropdown">
+                                  <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-email"
+                                      role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Rekap Presensi <div class="arrow-down"></div>
+                                  </a>
+                                  <div class="dropdown-menu" aria-labelledby="topnav-email">
+                                     <a href="<?php echo base_url('/laporan');?>" class="dropdown-item">Semua Pegawai</a>
+                                     <a href="<?php echo base_url('/laporan/personal');?>" class="dropdown-item">Individu</a>
+                                     <!-- <a href="<?php echo base_url('/presensi/addpresensi');?>" class="dropdown-item">Add Presensi</a> -->
+                                  </div>
+                              </div>
+                              <!-- <a href="<?php echo base_url('/kinerja');?>" class="dropdown-item">Laporan Kinerja</a> -->
                           </div>
                       </li>
-					  
+                      <?php if ($this->session->userdata('role') == 'Admin'): ?>				  
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard" role="button"
+                              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="mdi mdi-account-key mr-2"></i>Managemen Perizinan <div class="arrow-down"></div>
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
+                              <!-- <a href="<?php echo base_url('/kartusantri');?>" class="dropdown-item">Laporan Perizinan</a> -->
+                              <a href="#" class="dropdown-item">Lapor Izin</a>
+                              <a href="#" class="dropdown-item">Kategori Perizinan</a>
+                              <a href="#" class="dropdown-item">Rekap Perizinan</a>
+                          </div>
+                      </li>
+					  <?php endif; ?>
+
+                      <li class="nav-item">
+                          <a class="nav-link  arrow-none" href="<?php echo base_url('/kinerja');?>" id="topnav-dashboard"
+                              aria-expanded="false">
+                              <i class="mdi mdi-account-key mr-2"></i>Laporan pekerjaan</a>
+                      </li>
+
+
 					  <?php if ($this->session->userdata('role') == 'Admin'): ?>				  
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard" role="button"

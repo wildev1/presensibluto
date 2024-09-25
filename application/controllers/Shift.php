@@ -9,7 +9,7 @@ class Shift extends CI_Controller {
     }
 
     public function index() {
-		$this->data['title'] = 'Shift';
+		$this->data['title'] = 'Jam Kerja';
 
         $this->data['shifts'] = $this->ShiftModel->get_all_shifts();
 		$this->data['content_view'] = 'pages/shift/index';

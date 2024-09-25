@@ -30,11 +30,11 @@
                                 <tr>
                                     <th width="10px">No</th>
 									<th>Nama</th>
-									<th>No Pegawai</th>
+									<th>NIK</th>
 									<th>Email</th>
-									<th>Telepon</th>
+									<th>Tlp/Wa</th>
 									<th>Status Pegawai</th>
-									<th>Role</th>
+									<th>Akses</th>
                                     <th width="100px">Action</th>
                                 </tr>
                             </thead>

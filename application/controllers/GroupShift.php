@@ -11,7 +11,7 @@ class GroupShift extends CI_Controller {
 
     public function index() {
         
-		$this->data['title'] = 'Group Shift ';
+		$this->data['title'] = 'Jadwal Kerja ';
 		
      	$this->data['group_shifts'] = $this->GroupShiftModel->get_all_group_shifts();
         $this->data['shifts'] = $this->ShiftModel->get_all_shifts();

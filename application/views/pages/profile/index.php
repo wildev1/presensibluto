@@ -37,7 +37,7 @@
 		<div class="col-xl-8">
 			<div class="card">
 				<div class="card-body">
-					<h4 class="card-title mb-4">Profile Karyawan</h4>
+					<h4 class="card-title mb-4">Profil Pegawai</h4>
 					<div class="table-responsive">
 						<table class="table table-nowrap mb-0">
 							<tbody>
@@ -46,7 +46,7 @@
 									<td><?php echo $user->nama; ?></td>
 								</tr>
 								<tr>
-									<th scope="row">Nomor Pegawai</th>
+									<th scope="row">NIK</th>
 									<td><?php echo $user->no_pegawai; ?></td>
 								</tr>
 								<tr>
@@ -58,7 +58,7 @@
 									<td><?php echo $user->email; ?></td>
 								</tr>
 								<tr>
-									<th scope="row">No/Tlp</th>
+									<th scope="row">Tlp/Wa</th>
 									<td><?php echo $user->telepon; ?></td>
 								</tr>
 								<tr>
@@ -68,14 +68,6 @@
 								<tr>
 									<th scope="row">Status Kepegawain</th>
 									<td><?php echo $user->nama_status_pegawai; ?></td>
-								</tr>
-								<tr>
-									<th scope="row">Status</th>
-									<td><?php echo $user->status; ?></td>
-								</tr>
-								<tr>
-									<th scope="row">Tanggal Pembuatan Akun</th>
-									<td><?php echo $user->created_at; ?></td>
 								</tr>
 							</tbody>
 						</table>

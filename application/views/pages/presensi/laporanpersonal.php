@@ -65,7 +65,6 @@
                         <hr>
                     </div>
 
-					<h1>TEST DATA PROFILE</h1>
 
                     <div class="table-responsive">
                         <table id="datatable" class="table table-striped table-bordered dt-responsive nowrap"

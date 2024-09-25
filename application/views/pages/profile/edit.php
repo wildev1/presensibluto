@@ -17,7 +17,7 @@
                     <input type="text" class="form-control" id="nama" name="nama" value="<?php echo set_value('nama', $user->nama); ?>" required>
                 </div>
                 <div class="form-group">
-                    <label for="no_pegawai">No Pegawai</label>
+                    <label for="no_pegawai">NIK</label>
                     <input type="text" class="form-control" id="no_pegawai" name="no_pegawai" value="<?php echo set_value('no_pegawai', $user->no_pegawai); ?>">
                 </div>
 
@@ -33,7 +33,7 @@
                     <input type="email" class="form-control" id="email" name="email" value="<?php echo set_value('email', $user->email); ?>" required>
                 </div>
                 <div class="form-group">
-                    <label for="telepon">Telepon</label>
+                    <label for="telepon">Tlp/Wa</label>
                     <input type="text" class="form-control" id="telepon" name="telepon" value="<?php echo set_value('telepon', $user->telepon); ?>">
                 </div>
                 <div class="form-group">

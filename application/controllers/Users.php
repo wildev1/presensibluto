@@ -23,7 +23,7 @@ class Users extends CI_Controller {
 	}
 
 	public function karyawan() {
-		$this->data['title'] = 'Karyawan';
+		$this->data['title'] = 'Data Pegawai';
 
 		$this->data['users'] = $this->UsersModel->get_all_users();
 		$this->data['status_pegawai'] = $this->StatusPegawaiModel->get_all_status_pegawai();

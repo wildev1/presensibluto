@@ -9,7 +9,7 @@ class UsersShiftGroup extends CI_Controller {
     }
 
    public function index() {
-		$this->data['title'] = 'Users Shift';
+		$this->data['title'] = 'Jadwal Pegawai';
 		$this->data['users'] = $this->UsersModel->get_all_users();
 		$this->data['shift_groups'] = $this->GroupShiftModel->get_all_group_shifts();
 		$this->data['users_shift_groups'] = $this->UsersShiftGroupModel->get_all_users_shift_groups();

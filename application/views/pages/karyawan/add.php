@@ -18,7 +18,7 @@
 								<input type="text" class="form-control" id="nama" name="nama" value="<?php echo set_value('nama'); ?>" required>
 							</div>
 							<div class="form-group">
-								<label for="no_pegawai">No Pegawai</label>
+								<label for="no_pegawai">NIK</label>
 								<input type="text" class="form-control" id="no_pegawai" name="no_pegawai" value="<?php echo set_value('no_pegawai'); ?>">
 							</div>
 							<!-- <div class="form-group">
@@ -30,7 +30,7 @@
 								<input type="email" class="form-control" id="email" name="email" value="<?php echo set_value('email'); ?>" required>
 							</div>
 							<div class="form-group">
-								<label for="telepon">Telepon</label>
+								<label for="telepon">Tlp/Wa</label>
 								<input type="text" class="form-control" id="telepon" name="telepon" value="<?php echo set_value('telepon'); ?>">
 							</div>
 							<div class="form-group">
@@ -53,7 +53,7 @@
 								</select>
 							</div>
 							<div class="form-group">
-								<label for="roles">Roles</label>
+								<label for="roles">Akses</label>
 								<select class="form-control" id="roles" name="roles">
 									<?php foreach ($roles as $role): ?>
 										<option value="<?php echo $role->roles_id; ?>"><?php echo $role->nama_roles; ?></option>
