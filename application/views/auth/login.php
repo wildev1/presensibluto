@@ -23,8 +23,8 @@
                             <div class="row">
                                 <div class="col-7">
                                     <div class="text-primary p-4">
-                                        <h5 class="text-primary">Halo</h5>
-                                        <p>Silahkan login Applikasi untuk Absensi.</p>
+                                        <h5 class="text-primary">Presensi Online Puskesmas Bluto</h5>
+                                        <p>Silahkan login untuk melakukan Absensi.</p>
                                     </div>
                                 </div>
                                 <div class="col-5 align-self-end">
