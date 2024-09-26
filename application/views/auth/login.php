@@ -23,8 +23,8 @@
                             <div class="row">
                                 <div class="col-7">
                                     <div class="text-primary p-4">
-                                        <h5 class="text-primary">Welcome !</h5>
-                                        <p>Sign in to continue to E-SiP <?php echo $result->nama_lembaga; ?>.</p>
+                                        <h5 class="text-primary">Halo</h5>
+                                        <p>Silahkan login Applikasi untuk Absensi.</p>
                                     </div>
                                 </div>
                                 <div class="col-5 align-self-end">
@@ -69,11 +69,12 @@
                                         <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Log In</button>
                                     </div>
                                     <div class="mt-4 text-center">
-									<p> Devlop by
-										<i class="mdi mdi-heart text-danger"></i> PT Wilcorp Putra Jaya <br>©
+									<p> <br>©
 										<script>
 											document.write(new Date().getFullYear())
-										</script> Puskesmas Bluto
+										</script> Puskesmas Bluto <p>
+                                        Devlop by
+										<i class="mdi mdi-heart text-danger"></i> PT. Wilcorp Putra Jaya
 									</p>
                        			  </div> 
 								</div>
