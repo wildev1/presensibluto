@@ -73,7 +73,7 @@
 										<i class="mdi mdi-heart text-danger"></i> PT. Wilcorp Putra Jaya <br>©
 										<script>
 											document.write(new Date().getFullYear())
-										</script> Puskesmas Bluto.
+										</script> Puskesmas Bluto
 									</p>
                        			  </div> 
 								</div>
