@@ -70,7 +70,7 @@
                                     </div>
                                     <div class="mt-4 text-center">
 									<p> Devlop by
-										<i class="mdi mdi-heart text-danger"></i> PT. Wilcorp Putra Jaya <br>©
+										<i class="mdi mdi-heart text-danger"></i> PT Wilcorp Putra Jaya <br>©
 										<script>
 											document.write(new Date().getFullYear())
 										</script> Puskesmas Bluto
