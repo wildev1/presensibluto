@@ -69,11 +69,11 @@
                                         <button class="btn btn-primary btn-block waves-effect waves-light" type="submit">Log In</button>
                                     </div>
                                     <div class="mt-4 text-center">
-									<p> Crafted with 
-										<i class="mdi mdi-heart text-danger"></i> by Aqid Fahri Hafin <br>©
+									<p> Devlop by
+										<i class="mdi mdi-heart text-danger"></i> PT. Wilcorp Putra Jaya <br>©
 										<script>
 											document.write(new Date().getFullYear())
-										</script> Apins Digital.
+										</script> Puskesmas Bluto.
 									</p>
                        			  </div> 
 								</div>
