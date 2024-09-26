@@ -28,7 +28,7 @@
                                     </div>
                                 </div>
                                 <div class="col-5 align-self-end">
-                                    <img src="<?php echo base_url('public/assets/');?>../upload/logo/logo.png" alt="" class="img-fluid">
+                                    <img src="<?php echo base_url('public/assets/');?>/upload/logo/logo.png" alt="" class="img-fluid">
                                 </div>
                             </div>
                         </div>
