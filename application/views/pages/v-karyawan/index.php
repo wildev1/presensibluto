@@ -1,708 +1,393 @@
 <!DOCTYPE html>
-<html lang="en">
-<!-- Copied from http://mutationmedia.net/FOXEVCARD/index.html by Cyotek WebCopy 1.8.0.652, Monday, September 7, 2020, 6:45:05 PM -->
-   <head>
-      <!-- Metas -->
-      <meta charset="utf-8">
-      <title><?php echo $title ?> | Dashboard</title>
-      <meta name="description" content="">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- Css -->
-      <link href="<?php echo base_url('public/vendor/css/');?>bootstrap.css" rel="stylesheet" type="text/css" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>main.css" rel="stylesheet" type="text/css" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>venobox.css" rel="stylesheet" type="text/css" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>animate.css" rel="stylesheet" type="text/css" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>fonts.css" rel="stylesheet" type="text/css" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>owl-carousel/owl.carousel.css" rel="stylesheet" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>owl-carousel/owl.theme.css" rel="stylesheet" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>owl-carousel/owl.transitions.css" rel="stylesheet" media="all">
-      <link href="../css.css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-      <!--Alternate styles for demo purposes only-->
-      <link href="<?php echo base_url('public/vendor/css/');?>switcher.css" rel="stylesheet" type="text/css">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-1.css" rel="stylesheet" type="text/css" title="clr-1" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-2.css" rel="alternate stylesheet" type="text/css" title="clr-2" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-3.css" rel="alternate stylesheet" type="text/css" title="clr-3" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-4.css" rel="alternate stylesheet" type="text/css" title="clr-4" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-5.css" rel="alternate stylesheet" type="text/css" title="clr-5" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-6.css" rel="alternate stylesheet" type="text/css" title="clr-6" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-7.css" rel="alternate stylesheet" type="text/css" title="clr-7" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-8.css" rel="alternate stylesheet" type="text/css" title="clr-8" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-9.css" rel="alternate stylesheet" type="text/css" title="clr-9" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-10.css" rel="alternate stylesheet" type="text/css" title="clr-10" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-11.css" rel="alternate stylesheet" type="text/css" title="clr-11" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-12.css" rel="alternate stylesheet" type="text/css" title="clr-12" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-13.css" rel="alternate stylesheet" type="text/css" title="clr-13" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-14.css" rel="alternate stylesheet" type="text/css" title="clr-14" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-15.css" rel="alternate stylesheet" type="text/css" title="clr-15" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-16.css" rel="alternate stylesheet" type="text/css" title="clr-16" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-17.css" rel="alternate stylesheet" type="text/css" title="clr-17" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-18.css" rel="alternate stylesheet" type="text/css" title="clr-18" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-19.css" rel="alternate stylesheet" type="text/css" title="clr-19" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-20.css" rel="alternate stylesheet" type="text/css" title="clr-20" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-21.css" rel="alternate stylesheet" type="text/css" title="clr-21" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-22.css" rel="alternate stylesheet" type="text/css" title="clr-22" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-23.css" rel="alternate stylesheet" type="text/css" title="clr-23" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-24.css" rel="alternate stylesheet" type="text/css" title="clr-24" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-25.css" rel="alternate stylesheet" type="text/css" title="clr-25" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-26.css" rel="alternate stylesheet" type="text/css" title="clr-26" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-27.css" rel="alternate stylesheet" type="text/css" title="clr-27" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-28.css" rel="alternate stylesheet" type="text/css" title="clr-28" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-29.css" rel="alternate stylesheet" type="text/css" title="clr-29" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-30.css" rel="alternate stylesheet" type="text/css" title="clr-30" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-31.css" rel="alternate stylesheet" type="text/css" title="clr-31" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-32.css" rel="alternate stylesheet" type="text/css" title="clr-32" media="all">
-      <link href="<?php echo base_url('public/vendor/css/');?>styles/clr-33.css" rel="alternate stylesheet" type="text/css" title="clr-33" media="all">
-   </head>
-   <body>
-      <div class="loader">
-         <div class="loader-inner">
-            <div class="bounce">
-               <div class="bounce-circle"></div>
-            </div>
-         </div>
-      </div>
-      <div id="wrapper" class="wrapper home">
-         <!--Alternate styles for demo purposes only-->
-         <div class="styler">
-            <div class="mb-3">
-               <h6 class="font-weight-600 font-size-17">Theme Colors</h6>
-               <hr class="divider divider-md divider-center m-0">
-            </div>
-            <div class="toggle">
-               <div class="outer radius-1 d-inline-block">
-                  <a class=" inner radius-1 d-block" href="#"><span class="fa fa-cog"></span></a>
-               </div>
-            </div>
-				<div class="day-night-mode">
-               <div class="outer radius-1 d-inline-block">
-                  <a class=" inner radius-1 d-block" href="<?php echo site_url('auth/logout'); ?>"><span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-               </div>
-            </div>
-            <div>
-               <h6 class="text-muted font-weight-400 mb-0">Pick a color</h6>
-               <ul class="color-list pl-0 mb-0">
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-1'); return false;" class="clr-1 inner" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-2'); return false;" class="clr-2 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-3'); return false;" class="clr-3 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-4'); return false;" class="clr-4 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-5'); return false;" class="clr-5 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-6'); return false;" class="clr-6 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-7'); return false;" class="clr-7 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-8'); return false;" class="clr-8 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-9'); return false;" class="clr-9 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-10'); return false;" class="clr-10 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-11'); return false;" class="clr-11 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-12'); return false;" class="clr-12 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-13'); return false;" class="clr-13 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-14'); return false;" class="clr-14 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-15'); return false;" class="clr-15 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-16'); return false;" class="clr-16 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-17'); return false;" class="clr-17 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-18'); return false;" class="clr-18 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-19'); return false;" class="clr-19 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-20'); return false;" class="clr-20 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer"><a onclick="setActiveStyleSheet('clr-21'); return false;" class="clr-21 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-22'); return false;" class="clr-22 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-23'); return false;" class="clr-23 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-24'); return false;" class="clr-24 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-25'); return false;" class="clr-25 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer"><a onclick="setActiveStyleSheet('clr-26'); return false;" class="clr-26 inner" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-27'); return false;" class="clr-27 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-28'); return false;" class="clr-28 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-29'); return false;" class="clr-29 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-30'); return false;" class="clr-30 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-31'); return false;" class="clr-31 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-32'); return false;" class="clr-32 inner-sm" href="#"><span></span></a></li>
-                  <li class="outer-sm"><a onclick="setActiveStyleSheet('clr-33'); return false;" class="clr-33 inner-sm" href="#"><span></span></a></li>
-               </ul>
-            </div>
-            <div class="mt-3">
-            <div class="reset outer radius-2 d-inline-block">
-               <a class="inner radius-2 d-block px-4 py-1 font-size-13 text-dark font-weight-500" href="#" onclick="setActiveStyleSheet('clr-1'); return false;">
-               Reset
-               </a>
-            </div>
-            <div class="ml-1 close-styler outer radius-2 d-inline-block">
-               <a class="inner radius-2 d-block px-4 py-1 font-size-13 text-dark font-weight-500" href="#">
-               Close
-               </a>
-            </div>
-            </div>         
-			</div>
-         <div class="parallax position-absolute d-none d-lg-block" data-relative-input="true">          
-            <img class="max-width-9 layer p2 " src="assets/svg/square-rl.svg" alt="" data-depth="0.7">
-            <img class="max-width-9 shadow-inner radius-5 layer p3" src="assets/svg/circle.svg" alt="" data-depth="0.5">
-            <img class="max-width-10 shadow-inner radius-5 layer p4 " src="assets/svg/dashed-circle.svg" alt="" data-depth="0.3">
-            <img class="max-width-8 layer p5 " src="assets/svg/square-poly.svg" alt="" data-depth="0.7">
-            <img class="max-width-8 layer shadow radius-2 p6" src="assets/svg/square.svg" alt="" data-depth="0.5">
-         </div>
-         <div class="blurred-content"></div>
-         <div class="container spacer-xlg">
-            <div class="row ">
-               <div class="col-lg-9 my-order-switch-1 ">
-                  <section id="home" class="shadow bg-light radius-2 padding-dy text-center ">
-                     <div class="row v-height-50 v-centred">
-                        <div class="col-md-12">
-                      <div class="row mb-5">
-                        <div class="col">
-										<h6 class="font-weight-700  mb-0 text-uppercase mb-2">Profile</h6>
-										<hr class="divider divider-left divider-lg float-left">
-									</div>
-								</div>
-								<div class="row mb-2">
-									<div class="col-lg-12">
-										<h1 class="font-weight-600 mb-0"><?php echo $user->nama; ?></h1>
-										<h6 class="h5 text-muted"><?php echo $user->roles; ?></h6>
-									</div>
-								</div>
-                        </div>
-                     </div>
-                  </section>
+<html lang="en"> <!--begin::Head-->
 
-						
-                  <section id="AbsenApel" class="shadow bg-light radius-2 padding-dy work">
-							<div class="row mb-5">
-                        <div class="col">
-                           <h6 class="font-weight-700  mb-0 text-uppercase mb-2">Laporan Apel</h6>
-                           <hr class="divider divider-left divider-lg float-left">
-                        </div>
-                     </div>
-                     <div>
-								Absen Apel
-							</div>
-                  </section>
-						<!-- add presensi kerja -->
-                  <section id="AbsenKerja" class="shadow bg-light radius-2 padding-dy">
-							<div class="row mb-5">
-                        <div class="col">
-                           <h6 class="font-weight-700  mb-0 text-uppercase mb-2">Absen Kerja</h6>
-                           <hr class="divider divider-left divider-lg float-left">
-                        </div>
-                     </div>
-							
-                      <div class="col-md-12">
-								<div  align="center">
-								 <!-- Check In Section -->
-								<?php if ($check_in_active): ?>
-										<form id="checkin-form" method="post" enctype="multipart/form-data" action="<?php echo site_url('presensi/check_in'); ?>">
-											<!-- Input Kamera (tersembunyi) -->
-											<input type="file" id="camera-in" name="photo" accept="image/*" required capture="environment" style="display:none;" onchange="previewPhoto(event, 'in')" />
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>AdminLTE v4 | Dashboard</title><!--begin::Primary Meta Tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="AdminLTE v4 | Dashboard">
+    <meta name="author" content="ColorlibHQ">
+    <meta name="description" content="AdminLTE is a Free Bootstrap 5 Admin Dashboard, 30 example pages using Vanilla JS.">
+    <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, colorlibhq, colorlibhq dashboard, colorlibhq admin dashboard"><!--end::Primary Meta Tags--><!--begin::Fonts-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css" integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q=" crossorigin="anonymous"><!--end::Fonts--><!--begin::Third Party Plugin(OverlayScrollbars)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.3.0/styles/overlayscrollbars.min.css" integrity="sha256-dSokZseQNT08wYEWiz5iLI8QPlKxG+TswNRD8k35cpg=" crossorigin="anonymous"><!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Third Party Plugin(Bootstrap Icons)-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.min.css" integrity="sha256-Qsx5lrStHZyR9REqhUF8iQt73X06c8LGIUPzpOhwRrI=" crossorigin="anonymous"><!--end::Third Party Plugin(Bootstrap Icons)--><!--begin::Required Plugin(AdminLTE)-->
+    <link rel="stylesheet" href="<?= base_url('layout/adminlte/dist/css/adminlte.css'); ?>">
+    <!--end::Required Plugin(AdminLTE)-->
+    <!-- apexcharts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.css" integrity="sha256-4MX+61mt9NVvvuPjUWdUdyfZfxSB1/Rf9WtqRHgG5S0=" crossorigin="anonymous"><!-- jsvectormap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css" integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4=" crossorigin="anonymous">
+</head> <!--end::Head--> <!--begin::Body-->
 
-											<!-- Preview Foto Check In -->
-											<div id="photo-preview-in" style="display:none; margin-bottom: 10px;">
-												<img id="preview-img-in" src="" alt="Preview Foto" style="max-width: 100%; height: auto; border: 1px solid #ccc;" />
-											</div>
-
-											<!-- Tombol Kamera Check In -->
-											<button type="button" class="btn btn-info" onclick="openCamera('camera-in')">
-												<i class="mdi mdi-camera-outline d-block font-size-16"></i> Kamera
-											</button>
-
-											<!-- Tombol Check In -->
-											<button type="submit" class="btn btn-primary">
-												<i class="mdi mdi-upload d-block font-size-16"></i> Absen Masuk
-											</button>
-										</form>
-								<?php else: ?>
-										<button type="button" class="btn btn-light waves-effect waves-light w-sm" disabled>
-											<i class="mdi mdi-upload d-block font-size-16"></i>Absen Masuk
-										</button>
-										<br>
-								<?php endif; ?>
-								<br>
-								<hr>
-								<br>
-								 <!-- Check Out Section -->
-								<?php if ($check_out_active): ?>
-										<form id="checkout-form" method="post" enctype="multipart/form-data" action="<?php echo site_url('presensi/check_out'); ?>">
-											<!-- Input Kamera (tersembunyi) -->
-											<input type="file" id="camera-out" name="photo" accept="image/*" required capture="environment" style="display:none;" onchange="previewPhoto(event, 'out')" />
-
-											<!-- Preview Foto Check Out -->
-											<div id="photo-preview-out" style="display:none; margin-bottom: 10px;">
-												<img id="preview-img-out" src="" alt="Preview Foto" style="max-width: 100%; height: auto; border: 1px solid #ccc;" />
-											</div>
-
-											<!-- Tombol Kamera Check Out -->
-											<button type="button" class="btn btn-xl btn-info" onclick="openCamera('camera-out')">
-												<i class="mdi mdi-camera-outline d-block font-size-16"></i> Kamera
-											</button>
-											
-											<!-- Tombol Check Out -->
-											<button type="submit" class="btn btn-primary">
-												<i class="mdi mdi-upload d-block font-size-16"></i> Absen Keluar
-											</button>
-										</form>
-								<?php else: ?>
-										<button type="button" class="btn btn-light waves-effect waves-light w-sm" disabled>
-											<i class="mdi mdi-download d-block font-size-16"></i> Absen Keluar
-										</button>
-								<?php endif; ?>
-								</div>
-
-								<br>
-						<div align="center">
-							<h4 class="alert-heading">INFORMASI SHIFT</h4>
-						</div>
-
-						<?php if (!empty($shift_info)): ?>
-							<div class="text-center p-2 radius-1 shadow-inner">
-								<div class="shadow radius-1">
-										<ul class="text-center info-list font-size-14 p-2 list-inline mb-0">
-											<li><span class="inf">Shift</span> <span class="value"><?php echo $shift_info['nama_shift']; ?></span></li>
-											<li><span class="inf">Jam Mulai</span> <span class="value"><?php echo $shift_info['jam_mulai']; ?></span></li>
-											<li><span class="inf">Jam Selesai</span> <span class="value"><?php echo $shift_info['jam_selesai']; ?></span></li>
-											<li><span class="inf">Hari Ini</span> <span class="value"><?php echo $shift_info['hari']; ?></span></li>
-											<li><span class="inf">Waktu Sekarang</span> <span class="value"><span id="current-time"></span></span></li>
-										</ul>
-								</div>
-							</div>
-						<?php else: ?>
-							
-						<?php endif; ?>
-
-
-						<br>
-						
-						<div class="alert alert-info" role="alert" align="center">
-							<p class="mb-0"><?php echo $message; ?></p>
-						</div>
-							
-
-                     </div>
-                  </section>
-
-                  <section id="laporankerja" class="shadow bg-light radius-2 padding-dy ">
-                     <div class="row mb-5">
-                        <div class="col">
-                           <h6 class="font-weight-700  mb-0 text-uppercase mb-2">Laporan Kerja</h6>
-                           <hr class="divider divider-left divider-lg float-left">
-                        </div>
-                     </div>
-							<div>
-								laporan
-							</div>
-                     <div class="row">
-                        <div class="col-md-12 mt-6 pt-6 mb-6">
-                           <hr class="divider divider-lg divider-center ">
-                        </div>
-                        <div class="col-md-6 text-left mb-2 mb-lg-0">
-                           <a class="float-md-right" href="#">
-                              <div class="media  align-items-center">
-                                 <div class="outer radius-2  mr-3">
-                                    <div class="ui-icon ui-icon-md inner ">
-                                       <div class="ui-icon-inner">
-                                          <svg version="1.1" class="max-width-1-3 svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 518 518" enable-background="new 0 0 518 518;" xml:space="preserve">
-                                             <g>
-                                                <g>
-                                                   <rect x="169.4" y="438.2" width="179.2" height="25.6"></rect>
-                                                </g>
-                                             </g>
-                                             <g>
-                                                <g>
-                                                   <rect x="169.4" y="387" width="179.2" height="25.6"></rect>
-                                                </g>
-                                             </g>
-                                             <g>
-                                                <g>
-                                                   <rect x="169.4" y="335.8" width="179.2" height="25.6"></rect>
-                                                </g>
-                                             </g>
-                                             <g>
-                                                <g>
-                                                   <path d="M463.8,131h-64V3H118.2v128h-64C26,131,3,154,3,182.2v179.2c0,28.2,23,51.2,51.2,51.2h64V515h281.6V412.6h64
-                                                      c28.2,0,51.2-23,51.2-51.2V182.2C515,154,492,131,463.8,131z M143.8,28.6h230.4V131H143.8V28.6z M374.2,489.4H143.8V284.6h230.4
-                                                      V489.4z M489.4,361.4c0,14.1-11.5,25.6-25.6,25.6h-64V284.6h25.6c7.1,0,12.8-5.7,12.8-12.8c0-7.1-5.7-12.8-12.8-12.8H92.6
-                                                      c-7.1,0-12.8,5.7-12.8,12.8c0,7.1,5.7,12.8,12.8,12.8h25.6V387h-64c-14.1,0-25.6-11.5-25.6-25.6V182.2c0-14.1,11.5-25.6,25.6-25.6
-                                                      h409.6c14.1,0,25.6,11.5,25.6,25.6V361.4z"></path>
-                                                </g>
-                                             </g>
-                                             <g>
-                                                <g>
-                                                   <path d="M425.4,182.2H323c-7.1,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8h102.4c7.1,0,12.8-5.7,12.8-12.8
-                                                      S432.5,182.2,425.4,182.2z"></path>
-                                                </g>
-                                             </g>
-                                          </svg>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="media-body">
-                                    <span class="text-muted font-size-13 font-weight-600 text-uppercase">Print my Resume</span>
-                                 </div>
-                              </div>
-                           </a>
-                        </div>
-                     </div>
-                  </section>
-                  <section id="LaporanIzin" class="shadow bg-light radius-2 padding-dy">
-                     <div class="row mb-5">
-                        <div class="col">
-                           <h6 class="font-weight-700  mb-0 text-uppercase mb-2">Laporan Izin</h6>
-                           <hr class="divider divider-left divider-lg float-left">
-                        </div>
-                     </div>
-                     <div class="row justify-content-center">
-                        <div class="col-md-12">
-                           <form class="LaporanIzin-form" method="post" action="send.php">
-                              <div class="row">
-                                 <div class="col-sm-6">
-                                    <div class="outer radius-2 mb-3">
-	                                    <input class="inner form-control  h-100 " placeholder="Name" value="" id="name" name="name" type="text">
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-6">
-                                    <div class="outer radius-2 mb-3">
-                                       <input class="inner form-control  h-100 " value="" id="subject" name="subject" placeholder="Subject" type="text">
-                                    </div>
-                                 </div>
-                                 <div class="col-12">
-                                    <div class="outer radius-2 mb-3">
-                                       <textarea class="radius-2 inner form-control   resize-n " name="message" placeholder="Message" id="message" rows="6"></textarea>
-                                    </div>
-                                 </div>
-                                 <div class="col-12">
-                                    <div class="outer radius-2 d-inline-block text-center">
-                                       <a class="send inner radius-2 d-block py-2 px-4 font-size-15 font-weight-500" href="#">
-                                       Send message
-                                       </a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </form>                           <div id="success">
-                              <h2>Your message has been sent. Thank you!</h2>
-                           </div>
-                           <div id="error">
-                              <h2>Sorry your message can not be sent.</h2>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col-md-12 mt-6 pt-6 mb-6">
-                           <hr class="divider divider-lg divider-center ">
-                        </div>
-                        <div class="col-md-6 text-left mb-2 mb-lg-0">
-                           <a class="float-left" href="#">
-                              <div class="media  align-items-center">
-                                 <div class="outer radius-2 mr-3">
-                                    <div class="ui-icon ui-icon-md inner ">
-                                       <div class="ui-icon-inner">
-                                          <svg version="1.1" class="max-width-1-3 svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 517 517" enable-background="new 0 0 517 517;" xml:space="preserve">
-                                             <g>
-                                                <g>
-                                                   <path d="M514.5,258.5c0-141.4-114.6-256-256-256s-256,114.6-256,256s114.6,256,256,256S514.5,399.9,514.5,258.5z
-                                                      M28.1,258.5c0-127,103.4-230.4,230.4-230.4s230.4,103.4,230.4,230.4S385.5,488.9,258.5,488.9S28.1,385.5,28.1,258.5z"></path>
-                                                </g>
-                                             </g>
-                                             <g>
-                                                <g>
-                                                   <path d="M267.5,344.4l128-128c5-5,5-13.1,0-18.1s-13.1-5-18.1,0l-119,118.9l-118.9-119c-5-5-13.1-5-18.1,0
-                                                      c-2.5,2.5-3.8,5.8-3.8,9.1s1.2,6.6,3.7,9.1l128,128C254.4,349.4,262.5,349.4,267.5,344.4z"></path>
-                                                </g>
-                                             </g>
-                                          </svg>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="media-body">
-                                    <span class="text-muted font-size-13 font-weight-600 text-uppercase">Download my CV</span>
-                                 </div>
-                              </div>
-                           </a>
-                        </div>
-                        <div class="col-md-6 text-left mb-2 mb-lg-0">
-                           <a class="float-md-right" href="#">
-                              <div class="media  align-items-center">
-                                 <div class="outer radius-2  mr-3">
-                                    <div class="ui-icon ui-icon-md inner ">
-                                       <div class="ui-icon-inner">
-                                          <svg version="1.1" class="max-width-1-3 svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 518 518" enable-background="new 0 0 518 518;" xml:space="preserve">
-                                             <g>
-                                                <g>
-                                                   <rect x="169.4" y="438.2" width="179.2" height="25.6"></rect>
-                                                </g>
-                                             </g>
-                                             <g>
-                                                <g>
-                                                   <rect x="169.4" y="387" width="179.2" height="25.6"></rect>
-                                                </g>
-                                             </g>
-                                             <g>
-                                                <g>
-                                                   <rect x="169.4" y="335.8" width="179.2" height="25.6"></rect>
-                                                </g>
-                                             </g>
-                                             <g>
-                                                <g>
-                                                   <path d="M463.8,131h-64V3H118.2v128h-64C26,131,3,154,3,182.2v179.2c0,28.2,23,51.2,51.2,51.2h64V515h281.6V412.6h64
-                                                      c28.2,0,51.2-23,51.2-51.2V182.2C515,154,492,131,463.8,131z M143.8,28.6h230.4V131H143.8V28.6z M374.2,489.4H143.8V284.6h230.4
-                                                      V489.4z M489.4,361.4c0,14.1-11.5,25.6-25.6,25.6h-64V284.6h25.6c7.1,0,12.8-5.7,12.8-12.8c0-7.1-5.7-12.8-12.8-12.8H92.6
-                                                      c-7.1,0-12.8,5.7-12.8,12.8c0,7.1,5.7,12.8,12.8,12.8h25.6V387h-64c-14.1,0-25.6-11.5-25.6-25.6V182.2c0-14.1,11.5-25.6,25.6-25.6
-                                                      h409.6c14.1,0,25.6,11.5,25.6,25.6V361.4z"></path>
-                                                </g>
-                                             </g>
-                                             <g>
-                                                <g>
-                                                   <path d="M425.4,182.2H323c-7.1,0-12.8,5.7-12.8,12.8s5.7,12.8,12.8,12.8h102.4c7.1,0,12.8-5.7,12.8-12.8
-                                                      S432.5,182.2,425.4,182.2z"></path>
-                                                </g>
-                                             </g>
-                                          </svg>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="media-body">
-                                    <span class="text-muted font-size-13 font-weight-600 text-uppercase">Print my Resume</span>
-                                 </div>
-                              </div>
-                           </a>
-                        </div>
-                     </div>
-                  </section>
-                  <div class="row mt-4 justify-content-center ">
-                     <div class="text-center shadow-inner radius-2  py-1 px-4">
-                        <p class="font-size-11  mb-0 ">Desain by <a class="text-alt" href="#">apinsdigital.my.id</a> </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-3 pl-lg-0  my-order-switch-2 mb-lg-0 mb-5">
-                  <div class="sticky-lg-top">
-                     <header class="shadow bg-light radius-2 px-4 py-6 text-center ">
-                        <div class="profile-image">
-                           <div class="profile-image-border">
-                              <img class="rounded-circle" src="<?php echo base_url('upload/photo/'.$user->photo); ?>" alt="/">
-                           </div>
-                        </div>
-                        <div class="mt-4 mb-5">
-                           <h3 class="font-weight-600 mb-0"><?php echo $user->nama; ?>
-                           </h3>
-                           <h6 class="text-muted"><?php echo $user->roles; ?></h6>
-                        </div>
-								<!-- MENU  -->
-                        <nav id="main-nav" class="main-nav clearfix tabbed">
-                           <ul class="pl-0">
-                              <li class="outer radius-2 mb-3">
-                                 <a class="inner radius-2" href="#home">
-                                    <div class="media align-items-center ">
-                                       <div class="media-body text-left">
-                                          <span class="font-weight-600 font-size-13 text-uppercase  text-secondary-2">Home</span>
-                                       </div>
-                                       <svg version="1.1" class="max-width-1 svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 517 517" enable-background="new 0 0 517 517;" xml:space="preserve">
-                                          <g>
-                                             <g>
-                                                <path d="M504.6,187.1L274.2,7.9c-4.6-3.6-10.2-5.4-15.7-5.4s-11.1,1.8-15.7,5.4L12.4,187.1c-8.6,6.7-12,18.2-8.5,28.5
-                                                   c3.6,10.3,13.3,17.3,24.2,17.3h25.6v281.6h153.6V309.7h102.4v204.8h153.6V232.9h25.6c10.9,0,20.7-6.9,24.2-17.3
-                                                   C516.7,205.3,513.2,193.8,504.6,187.1z M437.7,207.3v281.6H335.3V309.7c0-14.1-11.5-25.6-25.6-25.6H207.3
-                                                   c-14.1,0-25.6,11.5-25.6,25.6v179.2H79.3V207.3H28.1L258.5,28.1l230.4,179.2H437.7L437.7,207.3z"></path>
-                                             </g>
-                                          </g>
-                                       </svg>
-                                    </div>
-                                 </a>
-                              </li>
-                              <li class="outer radius-2 mb-3">
-                                 <a class="inner radius-2" href="#AbsenApel">
-                                    <div class="media  align-items-center ">
-                                       <div class="media-body text-left">
-                                          <span class="font-weight-600 font-size-13 text-uppercase  text-secondary-2">Absen Apel</span>
-                                       </div>
-                                       <svg class="max-width-1 svg-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 517 414.6" enable-background="new 0 0 517 414.6;" xml:space="preserve">
-                                          <g>
-                                             <g>
-                                                <path d="M488.9,79.3h-91.8L327.8,10c-4.8-4.8-11.3-7.5-18.1-7.5H207.3c-6.8,0-13.3,2.7-18.1,7.5l-69.3,69.3H28.1
-                                                   C14,79.3,2.5,90.8,2.5,104.9v281.6c0,14.1,11.5,25.6,25.6,25.6h460.8c14.1,0,25.6-11.5,25.6-25.6V104.9
-                                                   C514.5,90.8,503,79.3,488.9,79.3z M488.9,386.5H28.1V104.9h102.4l76.8-76.8h102.4l76.8,76.8h102.4V386.5z"></path>
-                                             </g>
-                                          </g>
-                                          <g>
-                                             <g>
-                                                <path d="M258.5,104.9c-70.7,0-128,57.3-128,128s57.3,128,128,128s128-57.3,128-128S329.2,104.9,258.5,104.9z
-                                                   M258.5,335.3c-56.5,0-102.4-45.9-102.4-102.4S202,130.5,258.5,130.5s102.4,45.9,102.4,102.4S315,335.3,258.5,335.3z"></path>
-                                             </g>
-                                          </g>
-                                       </svg>
-                                    </div>
-                                 </a>
-                              </li>
-                              <li class="outer radius-2 mb-3">
-                                 <a class="inner radius-2" href="#AbsenKerja">
-                                    <div class="media  align-items-center ">
-                                       <div class="media-body text-left">
-                                          <span class="font-weight-600 font-size-13 text-uppercase  text-secondary-2">Absen Kerja</span>
-                                       </div>
-                                       <svg class="max-width-1 svg-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 517 414.6" enable-background="new 0 0 517 414.6;" xml:space="preserve">
-                                          <g>
-                                             <g>
-                                                <path d="M488.9,79.3h-91.8L327.8,10c-4.8-4.8-11.3-7.5-18.1-7.5H207.3c-6.8,0-13.3,2.7-18.1,7.5l-69.3,69.3H28.1
-                                                   C14,79.3,2.5,90.8,2.5,104.9v281.6c0,14.1,11.5,25.6,25.6,25.6h460.8c14.1,0,25.6-11.5,25.6-25.6V104.9
-                                                   C514.5,90.8,503,79.3,488.9,79.3z M488.9,386.5H28.1V104.9h102.4l76.8-76.8h102.4l76.8,76.8h102.4V386.5z"></path>
-                                             </g>
-                                          </g>
-                                          <g>
-                                             <g>
-                                                <path d="M258.5,104.9c-70.7,0-128,57.3-128,128s57.3,128,128,128s128-57.3,128-128S329.2,104.9,258.5,104.9z
-                                                   M258.5,335.3c-56.5,0-102.4-45.9-102.4-102.4S202,130.5,258.5,130.5s102.4,45.9,102.4,102.4S315,335.3,258.5,335.3z"></path>
-                                             </g>
-                                          </g>
-                                       </svg>
-                                    </div>
-                                 </a>
-                              </li>
-                              <li class="outer radius-2 mb-3">
-                                 <a class=" inner radius-2" href="#laporankerja">
-                                    <div class="media  align-items-center ">
-                                       <div class="media-body text-left">
-                                          <span class="font-weight-600 font-size-13 text-uppercase text-secondary-2">Laporan Kerja</span>
-                                       </div>
-                                       <svg version="1.1" class="max-width-1 svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 517 466.8" enable-background="new 0 0 517 466.8;" xml:space="preserve">
-                                          <g>
-                                             <g>
-                                                <path d="M488.9,2.5H156.1c-14.1,0-25.6,11.5-25.6,25.6v204.8c0,14.1,11.5,25.6,25.6,25.6h89.6l76.8,76.8l76.8-76.8
-                                                   h89.6c14.1,0,25.6-11.5,25.6-25.6V28.1C514.5,14,503,2.5,488.9,2.5z M488.9,232.9H388.7l-66.2,66.2l-66.2-66.2H156.1V28.1h332.8
-                                                   V232.9z"></path>
-                                             </g>
-                                          </g>
-                                          <g>
-                                             <g>
-                                                <path d="M360.9,333.1v27.8H260.7l-66.2,66.2l-66.2-66.2H28.1V156.1h76.8v-25.6H28.1C14,130.5,2.5,142,2.5,156.1v204.8
-                                                   c0,14.1,11.5,25.6,25.6,25.6h89.6l76.8,76.8l76.8-76.8h89.6c14.1,0,25.6-11.5,25.6-25.6v-53.4L360.9,333.1z"></path>
-                                             </g>
-                                          </g>
-                                       </svg>
-                                    </div>
-                                 </a>
-                              </li>
-                              <li class="outer radius-2 mb-3">
-                                 <a class=" inner radius-2" href="#LaporanIzin">
-                                    <div class="media  align-items-center ">
-                                       <div class="media-body text-left">
-                                          <span class="font-weight-600 font-size-13 text-uppercase  text-secondary-2">Laporan Izin</span>
-                                       </div>
-                                       <svg version="1.1" class="max-width-1 svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 514 411.6" enable-background="new 0 0 514 411.6;" xml:space="preserve">
-                                          <g>
-                                             <g>
-                                                <path d="M500.2,1H13.8C6.7,1,1,6.7,1,13.8v384c0,7.1,5.7,12.8,12.8,12.8h486.4c7.1,0,12.8-5.7,12.8-12.8v-384
-                                                   C513,6.7,507.3,1,500.2,1z M487.4,385H26.6V26.6h460.8V385z"></path>
-                                             </g>
-                                          </g>
-                                          <g>
-                                             <g>
-                                                <path d="M459.3,57.4c-4.2-5.7-12.2-6.9-17.9-2.7L257,189.9L72.6,54.7c-5.7-4.2-13.7-3-17.9,2.7s-3,13.7,2.7,17.9
-                                                   l192,140.8c2.3,1.6,4.9,2.5,7.6,2.5s5.3-0.8,7.6-2.5l192-140.8C462.3,71.2,463.5,63.1,459.3,57.4z"></path>
-                                             </g>
-                                          </g>
-                                       </svg>
-                                    </div>
-                                 </a>
-                              </li>
-                              <li class="outer radius-2 mb-3">
-                                 <a class=" inner radius-2" href="#LaporanIzin">
-                                    <div class="media  align-items-center ">
-                                       <div class="media-body text-left">
-                                          <span class="font-weight-600 font-size-13 text-uppercase  text-secondary-2">Rekap Presensi</span>
-                                       </div>
-                                       <svg version="1.1" class="max-width-1 svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 514 411.6" enable-background="new 0 0 514 411.6;" xml:space="preserve">
-                                          <g>
-                                             <g>
-                                                <path d="M500.2,1H13.8C6.7,1,1,6.7,1,13.8v384c0,7.1,5.7,12.8,12.8,12.8h486.4c7.1,0,12.8-5.7,12.8-12.8v-384
-                                                   C513,6.7,507.3,1,500.2,1z M487.4,385H26.6V26.6h460.8V385z"></path>
-                                             </g>
-                                          </g>
-                                          <g>
-                                             <g>
-                                                <path d="M459.3,57.4c-4.2-5.7-12.2-6.9-17.9-2.7L257,189.9L72.6,54.7c-5.7-4.2-13.7-3-17.9,2.7s-3,13.7,2.7,17.9
-                                                   l192,140.8c2.3,1.6,4.9,2.5,7.6,2.5s5.3-0.8,7.6-2.5l192-140.8C462.3,71.2,463.5,63.1,459.3,57.4z"></path>
-                                             </g>
-                                          </g>
-                                       </svg>
-                                    </div>
-                                 </a>
-                              </li>
-                           </ul>
-                        </nav>
-                     </header>
-                     <div class="text-center mt-5 ">
-                        <p class="font-size-14 mb-2">© Apins Digital.</p>
-                        <ul class="list-inline mt-auto mb-0">
-                           <li class="list-inline-item outer radius-2 mr-1">
-                              <a class="inner btn btn-round btn-icon" href="#">
-                              <span class="fab fa-facebook-f btn-icon-inner"></span>
-                              </a>
-                           </li>
-                           <li class="list-inline-item mr-1 outer radius-2">
-                              <a class="inner btn btn-round btn-icon" href="#">
-                              <span class="fab fa-google btn-icon-inner"></span>
-                              </a>
-                           </li>
-                           <li class="list-inline-item mx-0 outer radius-2 ">
-                              <a class="inner btn btn-round btn-icon" href="#">
-                              <span class="fab fa-twitter btn-icon-inner"></span>
-                              </a>
-                           </li>
+<body class="layout-fixed sidebar-expand-lg bg-body-tertiary"> <!--begin::App Wrapper-->
+    <div class="app-wrapper"> <!--begin::Header-->
+        <nav class="app-header navbar navbar-expand bg-body"> <!--begin::Container-->
+            <div class="container-fluid"> <!--begin::Start Navbar Links-->
+                <ul class="navbar-nav">
+                    <li class="nav-item"> <a class="nav-link" data-lte-toggle="sidebar" href="#" role="button"> <i class="bi bi-list"></i> </a> </li>
+                    <li class="nav-item d-none d-md-block"> <a href="#" class="nav-link">Home</a> </li>
+                    <li class="nav-item d-none d-md-block"> <a href="#" class="nav-link">Contact</a> </li>
+                </ul> <!--end::Start Navbar Links--> <!--begin::End Navbar Links-->
+                <ul class="navbar-nav ms-auto"> <!--begin::Navbar Search-->
+                    <li class="nav-item"> <a class="nav-link" data-widget="navbar-search" href="#" role="button"> <i class="bi bi-search"></i> </a> </li> <!--end::Navbar Search-->
+                    <li class="nav-item"> <a class="nav-link" href="#" data-lte-toggle="fullscreen"> <i data-lte-icon="maximize" class="bi bi-arrows-fullscreen"></i> <i data-lte-icon="minimize" class="bi bi-fullscreen-exit" style="display: none;"></i> </a> </li> <!--end::Fullscreen Toggle--> <!--begin::User Menu Dropdown-->
+                    <li class="nav-item dropdown user-menu"> <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> <img src="<?= base_url(); ?>/layout/adminlte/dist/assets/img/user2-160x160.jpg" class="user-image rounded-circle shadow" alt="User Image"> <span class="d-none d-md-inline"><?php echo $user->nama; ?></span> </a>
+                        <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end"> <!--begin::User Image-->
+                            <li class="user-header text-bg-primary"> <img src=<?php echo $user->photo; ?> class="rounded-circle shadow" alt="User Image">
+                                <p>
+                                <?php echo $user->nama; ?>
+                                    <small><?php echo $user->roles; ?></small>
+                                </p>
+                            </li> 
+                            <li class="user-footer"> <a href="#" class="btn btn-default btn-flat">Profile</a> <a href="#" class="btn btn-default btn-flat float-end">Sign out</a> </li> <!--end::Menu Footer-->
                         </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <a class="outer scroll-to-top  scroll" href="#wrapper">
-            <div class="scroll-to-top-inner inner radius-2"><span class=" fas fa-arrow-up top-icon "></span></div>
-         </a>
-         <!-- End to the top -->
-      </div>
-      <!-- End wrapper-->
-      <!--Javascript-->
-      <script src="<?php echo base_url('public/vendor/js/');?>jquery-1.12.4.min.js"></script>
-      <script src="<?php echo base_url('public/vendor/js/');?>bootstrap.min.js"></script>
-      <script src="<?php echo base_url('public/vendor/js/');?>jquery.easytabs.min.js"></script>
-      <script src="<?php echo base_url('public/vendor/js/');?>jquery.easing.1.3.js"></script>
-      <script src="<?php echo base_url('public/vendor/js/');?>smooth-scroll.js"></script>
-      <script src="<?php echo base_url('public/vendor/js/');?>venobox.js"></script>
-      <script src="<?php echo base_url('public/vendor/js/');?>owl.carousel.js"></script>
-      <script src="<?php echo base_url('public/vendor/js/');?>placeholders.min.js"></script>
-      <script src="<?php echo base_url('public/vendor/js/');?>parallax.js"></script>
-      <script src="<?php echo base_url('public/vendor/js/');?>morphext.min.js"></script>
-      <script src="<?php echo base_url('public/vendor/js/');?>switcher.js"></script>
-      <script src="<?php echo base_url('public/vendor/js/');?>script.js"></script>
-		  <!-- JavaScript untuk Kamera dan Preview Foto -->
-                <script>
-                    function openCamera(cameraId) {
-                        document.getElementById(cameraId).click();
-                    }
+                    </li> <!--end::User Menu Dropdown-->
+                </ul> <!--end::End Navbar Links-->
+            </div> <!--end::Container-->
+        </nav> <!--end::Header--> <!--begin::Sidebar-->
+        <main class="app-main"> <!--begin::App Content Header-->
+            <div class="app-content-header"> <!--begin::Container-->
+                <div class="container-fluid"> <!--begin::Row-->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h3 class="mb-0">Dashboard</h3>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-end">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">
+                                    Dashboard
+                                </li>
+                            </ol>
+                        </div>
+                    </div> <!--end::Row-->
+                </div> <!--end::Container-->
+            </div> <!--end::App Content Header--> <!--begin::App Content-->
+            <div class="app-content"> <!--begin::Container-->
+                <div class="container-fluid"> <!--begin::Row-->
+                    <div class="row"> <!--begin::Col-->
+                        <div class="row">
+                            <div class="col-lg-4 col-6 mb-4">
+                                <div class="small-box text-bg-primary h-100">
+                                    <div class="inner">
+                                        <h3>*</h3>
+                                        <p>Profil Pegawai</p>
+                                    </div>
+                                    <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>   
+                                        <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z"></path>
+                                    </svg>
+                                    <a href="#profilpegawai" class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
+                                        Kunjungi Profil <i class="bi bi-link-45deg"></i>
+                                    </a>
+                                </div>
+                            </div>
 
-                    function previewPhoto(event, type) {
-                        const file = event.target.files[0];
-                        if (file) {
-                            const reader = new FileReader();
-                            reader.onload = function(e) {
-                                document.getElementById('preview-img-' + type).src = e.target.result;
-                                document.getElementById('photo-preview-' + type).style.display = 'block';
-                            };
-                            reader.readAsDataURL(file);
-                        }
-                    }
-                </script>
+                            <div class="col-lg-4 col-6 mb-4">
+                                <div class="small-box text-bg-success h-100">
+                                    <div class="inner">
+                                        <h3>*</h3>
+                                        <p>Absen Apelmu</p>
+                                    </div>
+                                    <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"> 
+                                        <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
+                                    </svg>
+                                    <a href="#absenapel" class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
+                                        Absen Apel <i class="bi bi-link-45deg"></i>
+                                    </a>
+                                </div>
+                            </div>
 
-				<script>
-					function updateTime() {
-						const now = new Date();
-						const hours = now.getHours().toString().padStart(2, '0');
-						const minutes = now.getMinutes().toString().padStart(2, '0');
-						const seconds = now.getSeconds().toString().padStart(2, '0');
-						const currentTime = hours + ':' + minutes + ':' + seconds;
+                            <div class="col-lg-4 col-6 mb-4">
+                                <div class="small-box text-bg-warning h-100">
+                                    <div class="inner">
+                                        <h3>*</h3>
+                                        <p>Absen Kerja</p>
+                                    </div>
+                                    <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M8.5 6v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 1 0"/>
+                                    </svg>
+                                    <a href="#AbsenKerja" class="small-box-footer link-dark link-underline-opacity-0 link-underline-opacity-50-hover">
+                                        Absen Kerja <i class="bi bi-link-45deg"></i>
+                                    </a>
+                                </div>
+                            </div>
 
-						document.getElementById('current-time').textContent = currentTime;
-					}
+                            <div class="col-lg-4 col-6 mb-4">
+                                <div class="small-box text-bg-danger h-100">
+                                    <div class="inner">
+                                        <h3>*</h3>
+                                        <p>Laporan Pekerjaan</p>
+                                    </div>
+                                    <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zM10 8a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zm-6 4a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm4-3a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0v-3a1 1 0 0 1 1-1"/>
+                                    </svg>
+                                    <a href="#laporanpekerjaan" class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
+                                        Laporan Pekerjaan <i class="bi bi-link-45deg"></i>
+                                    </a>
+                                </div>
+                            </div>
 
-					// Memperbarui waktu setiap 1 detik
-					setInterval(updateTime, 1000);
+                            <div class="col-lg-4 col-6 mb-4">
+                                <div class="small-box text-bg-info h-100">
+                                    <div class="inner">
+                                        <h3>*</h3>
+                                        <p>Lapor Izin</p>
+                                    </div>
+                                    <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zM10 8a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zm-6 4a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm4-3a1 1 0 0 1 1 1v3a1 1 0 1 1-2 0v-3a1 1 0 0 1 1-1"/>
+                                    </svg>
+                                    <a href="#laporIzin" class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
+                                        Lapor Izin <i class="bi bi-link-45deg"></i>
+                                    </a>
+                                </div>
+                            </div>
 
-					// Memanggil fungsi pertama kali saat halaman dimuat
-					updateTime();
-				</script>
-      <!-- Google analytics -->
-      <!-- End google analytics -->
-   </body>
-<!-- Copied from http://mutationmedia.net/FOXEVCARD/index.html by Cyotek WebCopy 1.8.0.652, Monday, September 7, 2020, 6:45:05 PM -->
+                            <div class="col-lg-4 col-6 mb-4">
+                                <div class="small-box text-bg-secondary h-100">
+                                    <div class="inner">
+                                        <h3>*</h3>
+                                        <p>Rekap Presensi</p>
+                                    </div>
+                                    <svg class="small-box-icon" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
+                                    </svg>
+                                    <a href="#rekapPresensi" class="small-box-footer link-light link-underline-opacity-0 link-underline-opacity-50-hover">
+                                        Rekap Presensi <i class="bi bi-link-45deg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!--end::Col-->
+                </div> <!--end::Row--> <!--begin::Row-->
+</div> <!--end::Container-->
+</div> <!--end::App Content-->
+</main> <!--end::App Main--> <!--begin::Footer-->
+<footer class="app-footer"> <!--begin::To the end-->
+<div class="float-end d-none d-sm-inline">Support By PT. Wilcorp Putra Jaya</div> <!--end::To the end--> <!--begin::Copyright-->
+<strong>
+    Copyright &copy;<?php echo date('Y'); ?>&nbsp;
+    <a href="https://adminlte.io" class="text-decoration-none">PKM Bluto</a>.
+</strong>
+<!--end::Copyright-->
+</footer> <!--end::Footer-->
+</div> <!--end::App Wrapper--> <!--begin::Script--> <!--begin::Third Party Plugin(OverlayScrollbars)-->
+<script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.3.0/browser/overlayscrollbars.browser.es6.min.js" integrity="sha256-H2VM7BKda+v2Z4+DRy69uknwxjyDRhszjXFhsL4gD3w=" crossorigin="anonymous"></script> <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(popperjs for Bootstrap 5)-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha256-whL0tQWoY1Ku1iskqPFvmZ+CHsvmRWx/PIoEvIeWh4I=" crossorigin="anonymous"></script> <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha256-YMa+wAM6QkVyz999odX7lPRxkoYAan8suedu4k2Zur8=" crossorigin="anonymous"></script> <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
+<script src="<?= base_url('layout/adminlte/dist/js/adminlte.min.js'); ?>"></script> <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
+<script>
+    const SELECTOR_SIDEBAR_WRAPPER = ".sidebar-wrapper";
+    const Default = {
+        scrollbarTheme: "os-theme-light",
+        scrollbarAutoHide: "leave",
+        scrollbarClickScroll: true,
+    };
+    document.addEventListener("DOMContentLoaded", function() {
+        const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
+        if (
+            sidebarWrapper &&
+            typeof OverlayScrollbarsGlobal?.OverlayScrollbars !== "undefined"
+        ) {
+            OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
+                scrollbars: {
+                    theme: Default.scrollbarTheme,
+                    autoHide: Default.scrollbarAutoHide,
+                    clickScroll: Default.scrollbarClickScroll,
+                },
+            });
+        }
+    });
+</script> <!--end::OverlayScrollbars Configure--> <!-- OPTIONAL SCRIPTS --> <!-- sortablejs -->
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js" integrity="sha256-ipiJrswvAR4VAx/th+6zWsdeYmVae0iJuiR+6OqHJHQ=" crossorigin="anonymous"></script> <!-- sortablejs -->
+<script>
+    const connectedSortables =
+        document.querySelectorAll(".connectedSortable");
+    connectedSortables.forEach((connectedSortable) => {
+        let sortable = new Sortable(connectedSortable, {
+            group: "shared",
+            handle: ".card-header",
+        });
+    });
+
+    const cardHeaders = document.querySelectorAll(
+        ".connectedSortable .card-header",
+    );
+    cardHeaders.forEach((cardHeader) => {
+        cardHeader.style.cursor = "move";
+    });
+</script> <!-- apexcharts -->
+<script src="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.min.js" integrity="sha256-+vh8GkaU7C9/wbSLIcwq82tQ2wTf44aOHA8HlBMwRI8=" crossorigin="anonymous"></script> <!-- ChartJS -->
+<script>
+    // NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
+    // IT'S ALL JUST JUNK FOR DEMO
+    // ++++++++++++++++++++++++++++++++++++++++++
+
+    const sales_chart_options = {
+        series: [{
+                name: "Digital Goods",
+                data: [28, 48, 40, 19, 86, 27, 90],
+            },
+            {
+                name: "Electronics",
+                data: [65, 59, 80, 81, 56, 55, 40],
+            },
+        ],
+        chart: {
+            height: 300,
+            type: "area",
+            toolbar: {
+                show: false,
+            },
+        },
+        legend: {
+            show: false,
+        },
+        colors: ["#0d6efd", "#20c997"],
+        dataLabels: {
+            enabled: false,
+        },
+        stroke: {
+            curve: "smooth",
+        },
+        xaxis: {
+            type: "datetime",
+            categories: [
+                "2023-01-01",
+                "2023-02-01",
+                "2023-03-01",
+                "2023-04-01",
+                "2023-05-01",
+                "2023-06-01",
+                "2023-07-01",
+            ],
+        },
+        tooltip: {
+            x: {
+                format: "MMMM yyyy",
+            },
+        },
+    };
+
+    const sales_chart = new ApexCharts(
+        document.querySelector("#revenue-chart"),
+        sales_chart_options,
+    );
+    sales_chart.render();
+</script> <!-- jsvectormap -->
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/js/jsvectormap.min.js" integrity="sha256-/t1nN2956BT869E6H4V1dnt0X5pAQHPytli+1nTZm2Y=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/maps/world.js" integrity="sha256-XPpPaZlU8S/HWf7FZLAncLg2SAkP8ScUTII89x9D3lY=" crossorigin="anonymous"></script> <!-- jsvectormap -->
+<script>
+    const visitorsData = {
+        US: 398, // USA
+        SA: 400, // Saudi Arabia
+        CA: 1000, // Canada
+        DE: 500, // Germany
+        FR: 760, // France
+        CN: 300, // China
+        AU: 700, // Australia
+        BR: 600, // Brazil
+        IN: 800, // India
+        GB: 320, // Great Britain
+        RU: 3000, // Russia
+    };
+
+    // World map by jsVectorMap
+    const map = new jsVectorMap({
+        selector: "#world-map",
+        map: "world",
+    });
+
+    // Sparkline charts
+    const option_sparkline1 = {
+        series: [{
+            data: [1000, 1200, 920, 927, 931, 1027, 819, 930, 1021],
+        }, ],
+        chart: {
+            type: "area",
+            height: 50,
+            sparkline: {
+                enabled: true,
+            },
+        },
+        stroke: {
+            curve: "straight",
+        },
+        fill: {
+            opacity: 0.3,
+        },
+        yaxis: {
+            min: 0,
+        },
+        colors: ["#DCE6EC"],
+    };
+
+    const sparkline1 = new ApexCharts(
+        document.querySelector("#sparkline-1"),
+        option_sparkline1,
+    );
+    sparkline1.render();
+
+    const option_sparkline2 = {
+        series: [{
+            data: [515, 519, 520, 522, 652, 810, 370, 627, 319, 630, 921],
+        }, ],
+        chart: {
+            type: "area",
+            height: 50,
+            sparkline: {
+                enabled: true,
+            },
+        },
+        stroke: {
+            curve: "straight",
+        },
+        fill: {
+            opacity: 0.3,
+        },
+        yaxis: {
+            min: 0,
+        },
+        colors: ["#DCE6EC"],
+    };
+
+    const sparkline2 = new ApexCharts(
+        document.querySelector("#sparkline-2"),
+        option_sparkline2,
+    );
+    sparkline2.render();
+
+    const option_sparkline3 = {
+        series: [{
+            data: [15, 19, 20, 22, 33, 27, 31, 27, 19, 30, 21],
+        }, ],
+        chart: {
+            type: "area",
+            height: 50,
+            sparkline: {
+                enabled: true,
+            },
+        },
+        stroke: {
+            curve: "straight",
+        },
+        fill: {
+            opacity: 0.3,
+        },
+        yaxis: {
+            min: 0,
+        },
+        colors: ["#DCE6EC"],
+    };
+
+    const sparkline3 = new ApexCharts(
+        document.querySelector("#sparkline-3"),
+        option_sparkline3,
+    );
+    sparkline3.render();
+</script> <!--end::Script-->
+</body><!--end::Body-->
+
 </html>
-
