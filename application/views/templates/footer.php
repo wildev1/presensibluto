@@ -6,11 +6,11 @@
             <div class="col-sm-6">
                 <script>
                     document.write(new Date().getFullYear())
-                </script> © Apins Digital.
+                </script> © Puskemas Bluto.
             </div>
             <div class="col-sm-6">
                 <div class="text-sm-right d-none d-sm-block">
-                    Design & Develop by Aqid Fahri Hafin
+                    Puskemas Bluto
                 </div>
             </div>
         </div>

@@ -73,12 +73,12 @@
                             <tr>
                                 <th>No</th>
                                 <th>Nama</th>
-                                <th>Shift</th>
-                                <th>WM</th>
-                                <th>TM</th>
-                                <th>WK</th>
-                                <th>KA</th>
-                                <th>Status</th>
+                                <th>Jadwal Kerja</th>
+                                <th>Waktu Masuk</th>
+                                <th>Keterlambatan</th>
+                                <th>Pulang Awal</th>
+                                <th>Waktu Pulang</th>
+                                <th>Status Presensi</th>
                                 <th>Foto</th>
                             </tr>
                         </thead>
